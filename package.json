@@ -1,0 +1,60 @@
+{
+  "name": "cryptique",
+  "version": "1.0.0",
+  "description": "A simple and secure file encryption tool",
+  "main": "./out/main/index.js",
+  "author": "shreeshau.dev",
+  "scripts": {
+    "format": "prettier --write .",
+    "lint": "eslint . --ext .js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix",
+    "start": "electron-vite preview",
+    "dev": "electron-vite dev",
+    "build": "electron-vite build",
+    "postinstall": "electron-builder install-app-deps",
+    "build:unpack": "npm run build && electron-builder --dir",
+    "build:win": "npm run build && electron-builder --win",
+    "build:mac": "npm run build && electron-builder --mac",
+    "build:linux": "npm run build && electron-builder --linux"
+  },
+  "build": {
+    "appId": "dev.tharindu.cryptique",
+    "productName": "Cryptique",
+    "directories": {
+      "output": "dist"
+    },
+    "mac": {
+      "icon": "assets/icons/mac/logo.icns"
+    },
+    "linux": {
+      "icon": "assets/icons/png/logo.png"
+    },
+    "win": {
+      "icon": "assets/icons/win/logo.ico"
+    }
+  },
+  "dependencies": {
+    "@electron-toolkit/preload": "^3.0.0",
+    "@electron-toolkit/utils": "^3.0.0",
+    "@nextui-org/react": "^2.2.10",
+    "framer-motion": "^11.0.28",
+    "react-hot-toast": "^2.4.1"
+  },
+  "devDependencies": {
+    "@electron-toolkit/eslint-config": "^1.0.2",
+    "@electron-toolkit/eslint-config-prettier": "^2.0.0",
+    "@vitejs/plugin-react": "^4.2.1",
+    "autoprefixer": "^10.4.19",
+    "electron": "^28.2.0",
+    "electron-builder": "^24.13.3",
+    "electron-vite": "^2.0.0",
+    "eslint": "^8.56.0",
+    "eslint-plugin-react": "^7.33.2",
+    "postcss": "^8.4.38",
+    "postcss-loader": "^8.1.1",
+    "prettier": "^3.2.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tailwindcss": "^3.4.3",
+    "vite": "^5.0.12"
+  }
+}
